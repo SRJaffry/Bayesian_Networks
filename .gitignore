@@ -1,0 +1,14 @@
+*.docx
+bnlearn_temp/
+otherdata/
+DAG*
+real_world_data/titanic.csv
+real_world_data/Site*
+real_world_data/Only_features
+Causality_dataframe/
+Identify_*
+Conditional*
+*dta
+*.html
+Bayesian Network.ipynb
+getprob4mdata.ipynb

@@ -1,0 +1,8 @@
+1. I first understood the article from the PhD guy from Zurich in which he used statistics to show the relationship between the variables. But he relied on the DAG. Hence, I stumbled upon my question again. How to draw the DAG in first place from the given data.
+
+2. This brings me to following article: 
+https://towardsdatascience.com/a-step-by-step-guide-in-detecting-causal-relationships-using-bayesian-structure-learning-in-python-c20c6b31cee5
+
+3. What I tried in article read in (2) is that structural learning was unable to find any edges between the nodes. So the next thing I will try in the morning is the parametric learning.
+
+4. In parametric learning, the domain expert will use the knowledge to draw the graphs with nodes and edges. I left here and will pick up from here. 
