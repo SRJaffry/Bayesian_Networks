@@ -1,0 +1,7 @@
+Measurements: Original data as downloaded from the site
+
+data_ready_for_ML: It is cleaned and tuned in numeric dtype and is ready for ML algorithm. Training and validation set splits are not present yet
+
+cleaned_data_csv: This is the data in which we have removed all '\t' from data, and have make columns float type objects while they were numeric previously.
+
+features_only: It only contains features and nothing about the Lat/Long and date-time etc.
