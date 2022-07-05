@@ -2,9 +2,18 @@ import pandas as pd
 import numpy as np
 
 
+# This function returns which column has the maximum number of bins
+def max_binning(df):
+    max_ = 0;
+    for cols in df.columns:
+        if len(df[cols].unique()) > max_:
+            max_ = len(df[cols].unique())
+    return max_
+
+
 # Create Probability Matrix
 def create_Prob_matrix(df, 
-                      target_col_vector = ['RSRP_binned', 'RSRQ_binned', 'RSSI_binned','PCC_PHY_Thruput_DL_binned', 'PCC_SINR_binned']):
+                      target_col_vector = []):
     '''
         Returns a Probability Matrix
         Input: Data frame, names of columns for which we need the P() matrix
