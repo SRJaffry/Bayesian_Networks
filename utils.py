@@ -1,6 +1,45 @@
 import pandas as pd
 import numpy as np
 
+# This function can be used to verify the sum of all the probabilities. 
+def recursion_mult(df):
+    
+    # The purpose of this function is to do the element wise matrix multiplication using the recursion
+    
+    if df.empty:
+        return
+    else: 
+        # 1. First remove the 1st column from the df, and save it as array
+        ref_col = df.columns[0]
+        ref_arr = df[ref_col].values
+        df.drop(columns = ref_col, inplace = True)
+        
+        if df.empty:
+            return ref_arr
+        else:
+            arr = recursion_mult(df)
+            temp_arr = np.array([])
+            for elem in arr:
+                if len(temp_arr) == 0:
+                    temp_arr = np.multiply(elem, ref_arr) 
+                else:
+                    temp_arr = np.concatenate((temp_arr, np.multiply(elem, ref_arr)))
+                    
+            return temp_arr
+        
+## Test recursion using the following code
+
+'''
+ 
+# Create a Dataframe
+a,b,c = np.array([1,4,7]), np.array([2,5,8]), np.array([3,6,9])
+df = pd.DataFrame([a,b,c], columns = ['A', 'B', 'C'])
+print(df)
+
+arr = recursion_mult(df) 
+print('Sum of recursive multiplication is : {}'.format(arr.sum()) )
+
+'''
 
 # This function returns which column has the maximum number of bins
 def max_binning(df):
